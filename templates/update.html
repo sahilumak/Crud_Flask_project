@@ -1,0 +1,18 @@
+{% extends 'base.html' %}
+{% block base %}
+<div class="container my-3">
+    <h3> Update Todo's</h3>
+    <form action="/update/{{ todo.Srn }}" method="post">
+      <div class="mb-3">
+        <label for="title" class="form-label">Todo Title</label>
+        <input type="text" name="title" class="form-control" value="{{ todo.title }}"    id="title" aria-describedby="emailHelp">
+        <!-- <div id="emailHelp" class="form-text"></div> -->
+      </div>
+      <div class="mb-3">
+        <label for="desc" class="form-label">Todo Discription</label>
+        <input type="text" name="desc" class="form-control" value="{{ todo.desc }}"     id="desc">
+      </div>
+      <button type="submit" class="btn btn-dark">Update</button>
+    </form>
+  </div>
+{% endblock base %}
