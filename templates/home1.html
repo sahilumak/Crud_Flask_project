@@ -1,22 +1,22 @@
 {% extends "base.html" %}
 {% block base %}
   <div class="container my-3">
-    <h3> Add Todo's</h3>
+    <h3> Add Plan's</h3>
     <form action="/" method="post">
       <div class="mb-3">
-        <label for="title" class="form-label">Todo Title</label>
+        <label for="title" class="form-label">Title</label>
         <input type="text" name="title" class="form-control" id="title" aria-describedby="emailHelp">
         <!-- <div id="emailHelp" class="form-text"></div> -->
       </div>
       <div class="mb-3">
-        <label for="desc" class="form-label">Todo Discription</label>
+        <label for="desc" class="form-label">Discription</label>
         <input type="text" name="desc" class="form-control" id="desc">
       </div>
       <button type="submit" class="btn btn-dark">Submit</button>
     </form>
   </div>
   <div class="container my-3">
-    <h3>Your Todo's</h3>
+    <h3>Your Plan's</h3>
     {% if todos|length == 0 %}
     <div class="alert alert-info" role="alert">
       No Records.Enter Records Now!
